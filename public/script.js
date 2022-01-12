@@ -11,10 +11,15 @@ const videoGrid = document.getElementById('video-grid')
 const canvasGrid = document.getElementById('canvas-grid')
 
 const socket = io('/')
-const peer = new Peer(undefined, {
-    host: '/',
-    port: '3001',
+const peer = new Peer('someid', {
+    secure: true,
+    host: 'video-chat-room-with-pixel-averaging.herokuapp.com',
+    port: 443,
 })
+//const peer = new Peer(undefined, {
+//    host: '/',
+//    port: '3001',
+//})
 
 const myVideo = document.createElement('video')
 myVideo.muted = true
